@@ -1,0 +1,39 @@
+2018/11/05 10:58:14 Error: Expected response to be successful, got 422
+    at Request.handleFailure [as _handleFailure] (/usr/lib/heroku/node_modules/heroku-client/lib/request.js:254:11)
+    at Request.<anonymous> (/usr/lib/heroku/node_modules/heroku-cli-util/lib/command.js:56:12)
+    at concat.then (/usr/lib/heroku/node_modules/heroku-client/lib/request.js:148:16)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+2018/11/05 10:58:14 {"id":"invalid_params","message":"Name laravel-deproyment-test is already taken"}
+2018-11-05T15:03:56.371Z Error: You do not have access to the app laravel-deproyment-test.
+2018-11-05T15:03:56.371Z Error ID: forbidden
+2018-11-05T15:03:56.371Z     at Function.request (/usr/lib/heroku/node_modules/@heroku-cli/command/lib/api_client.js:93:27)
+2018-11-05T15:05:39.295Z Error: Missing required flag:
+2018-11-05T15:05:39.296Z  -a, --app APP  app to run command against
+2018-11-05T15:05:39.296Z See more help with --help
+2018-11-05T15:05:39.296Z     at validateFlags (/usr/lib/heroku/node_modules/@oclif/parser/lib/validate.js:34:27)
+2018-11-05T15:05:39.296Z     at Object.validate (/usr/lib/heroku/node_modules/@oclif/parser/lib/validate.js:39:5)
+2018-11-05T15:05:39.296Z     at Object.parse (/usr/lib/heroku/node_modules/@oclif/parser/lib/index.js:26:7)
+2018-11-05T15:05:39.296Z     at V5.parse (/usr/lib/heroku/node_modules/@oclif/command/lib/command.js:68:41)
+2018-11-05T15:05:39.296Z     at V5.run (/usr/lib/heroku/node_modules/@oclif/plugin-legacy/lib/index.js:90:52)
+2018-11-05T15:05:39.296Z     at V5._run (/usr/lib/heroku/node_modules/@oclif/command/lib/command.js:29:31)
+2018-11-06T03:13:00.168Z Error: Couldn't find that app.
+2018-11-06T03:13:00.168Z Error ID: not_found
+2018-11-06T03:13:00.168Z     at Function.request (/usr/lib/heroku/node_modules/@heroku-cli/command/lib/api_client.js:93:27)
+2018-11-12T13:38:40.261Z Error: Missing required flag:
+2018-11-12T13:38:40.261Z  -a, --app APP  app to run command against
+2018-11-12T13:38:40.261Z See more help with --help
+2018-11-12T13:38:40.261Z     at validateFlags (/usr/lib/heroku/node_modules/@oclif/parser/lib/validate.js:34:27)
+2018-11-12T13:38:40.261Z     at Object.validate (/usr/lib/heroku/node_modules/@oclif/parser/lib/validate.js:39:5)
+2018-11-12T13:38:40.261Z     at Object.parse (/usr/lib/heroku/node_modules/@oclif/parser/lib/index.js:26:7)
+2018-11-12T13:38:40.261Z     at V5.parse (/usr/lib/heroku/node_modules/@oclif/command/lib/command.js:68:41)
+2018-11-12T13:38:40.261Z     at V5.run (/usr/lib/heroku/node_modules/@oclif/plugin-legacy/lib/index.js:90:52)
+2018-11-12T13:38:40.261Z     at V5._run (/usr/lib/heroku/node_modules/@oclif/command/lib/command.js:29:31)
+2018-11-12T13:40:03.717Z Error: Missing required flag:
+2018-11-12T13:40:03.717Z  -a, --app APP  app to run command against
+2018-11-12T13:40:03.717Z See more help with --help
+2018-11-12T13:40:03.717Z     at validateFlags (/usr/lib/heroku/node_modules/@oclif/parser/lib/validate.js:34:27)
+2018-11-12T13:40:03.717Z     at Object.validate (/usr/lib/heroku/node_modules/@oclif/parser/lib/validate.js:39:5)
+2018-11-12T13:40:03.717Z     at Object.parse (/usr/lib/heroku/node_modules/@oclif/parser/lib/index.js:26:7)
+2018-11-12T13:40:03.717Z     at V5.parse (/usr/lib/heroku/node_modules/@oclif/command/lib/command.js:68:41)
+2018-11-12T13:40:03.717Z     at V5.run (/usr/lib/heroku/node_modules/@oclif/plugin-legacy/lib/index.js:90:52)
+2018-11-12T13:40:03.717Z     at V5._run (/usr/lib/heroku/node_modules/@oclif/command/lib/command.js:29:31)
