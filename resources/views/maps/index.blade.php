@@ -19,14 +19,21 @@
         height:38px;
         }
 	</style>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- jqueryの読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- BootstrapのJS読み込み -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	
 </head>
 	<body>
 	    
-	    <input type="text">
-	    <input type="text">
-	    <input type="text">
-	    <input type="text">
-	    <input type="text">
+	    <input type="text" id="text1">
+	    <input type="text" >
+	    <input type="text" >
+	    <input type="text" >
+	    <input type="text" >
 	    
 	    <nav class="navbar navbar-default">
 	<div class="container-fluid">
@@ -54,7 +61,7 @@
 		<div id="container">
 			<div id="sample"></div>
 
-			<p><button class="" onclick="maker()">検索</button></p>
+			<p><button class="" onclick="getLatLng()">検索</button></p>
 		</div>
 
 		<script>
@@ -73,6 +80,28 @@
 			var marker = [];
 			var infoWindow = [];
 			var markerData = [];
+			var lat1;
+			var lng1;
+		
+		function getLatLng () { //住所から経度緯度取得
+         var address = document.getElementById("text1").value;
+         var geocoder = new google.maps.Geocoder();
+         
+         geocoder.geocode({
+         address: address
+         }, function( results, status ){
+         if( status == google.maps.GeocoderStatus.OK ){
+         lat1 = results[0].geometry.location.lat();
+         lng1 = results[0].geometry.location.lng();
+         maker ();
+         } else {
+         alert('住所が正常に取得できませんでした。');
+         return false;
+         }
+         });
+         }
+         
+	
 			
 		function maker (){
 		    
@@ -83,9 +112,9 @@
 					lng: 129.877667,
 					icon: 'tam.png' //
 				}, {
-					name: '長崎大学',
-					lat: 32.786129,
-					lng: 129.864659
+					name: '長崎',
+					lat: lat1,
+					lng: lng1
 				}, {
 					name: '夢タウン',
 					lat: 32.746283,
