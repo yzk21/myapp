@@ -29,11 +29,11 @@
 </head>
 	<body>
 	    
-	    <input type="text" id="text1">
-	    <input type="text" >
-	    <input type="text" >
-	    <input type="text" >
-	    <input type="text" >
+	    <input type="text" id="text1" placeholder="A">
+	    <input type="text" placeholder="B">
+	    <input type="text" placeholder="C">
+	    <input type="text" placeholder="D">
+	    <input type="text" placeholder="E">
 	    
 	    <nav class="navbar navbar-default">
 	<div class="container-fluid">
