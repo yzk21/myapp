@@ -30,10 +30,10 @@
 	<body>
 	    
 	    <input type="text" id="text1" placeholder="A">
-	    <input type="text" placeholder="B">
-	    <input type="text" placeholder="C">
-	    <input type="text" placeholder="D">
-	    <input type="text" placeholder="E">
+	    <input type="text" id="text2" placeholder="B">
+	    <input type="text" id="text3" placeholder="C">
+	    <input type="text" id="text4" placeholder="D">
+	    <input type="text" id="text5" placeholder="E">
 	    
 	    <nav class="navbar navbar-default">
 	<div class="container-fluid">
@@ -82,7 +82,15 @@
 			var markerData = [];
 			var lat1;
 			var lng1;
-		
+			var lat2;
+			var lng2;
+			var lat3;
+			var lng3;
+			var lat4;
+			var lng4;
+			var lat5;
+			var lng5;
+			
 		function getLatLng () { //住所から経度緯度取得
          var address = document.getElementById("text1").value;
          var geocoder = new google.maps.Geocoder();
@@ -93,7 +101,10 @@
          if( status == google.maps.GeocoderStatus.OK ){
          lat1 = results[0].geometry.location.lat();
          lng1 = results[0].geometry.location.lng();
-         maker ();
+         getLatLng2 ();
+         getLatLng3 ();
+         getLatLng4 ();
+         getLatLng5 ();
          } else {
          alert('住所が正常に取得できませんでした。');
          return false;
@@ -101,8 +112,75 @@
          });
          }
          
-	
-			
+         function getLatLng2 () { //住所から経度緯度取得
+         var address = document.getElementById("text2").value;
+         var geocoder = new google.maps.Geocoder();
+         
+         geocoder.geocode({
+         address: address
+         }, function( results, status ){
+         if( status == google.maps.GeocoderStatus.OK ){
+         lat2 = results[0].geometry.location.lat();
+         lng2 = results[0].geometry.location.lng();
+         } else {
+         alert('住所が正常に取得できませんでした。');
+         return false;
+         }
+         });
+         }
+         
+         function getLatLng3 () { //住所から経度緯度取得
+         var address = document.getElementById("text3").value;
+         var geocoder = new google.maps.Geocoder();
+         
+         geocoder.geocode({
+         address: address
+         }, function( results, status ){
+         if( status == google.maps.GeocoderStatus.OK ){
+         lat3 = results[0].geometry.location.lat();
+         lng3 = results[0].geometry.location.lng();
+         } else {
+         alert('住所が正常に取得できませんでした。');
+         return false;
+         }
+         });
+         }
+         
+         function getLatLng4 () { //住所から経度緯度取得
+         var address = document.getElementById("text4").value;
+         var geocoder = new google.maps.Geocoder();
+         
+         geocoder.geocode({
+         address: address
+         }, function( results, status ){
+         if( status == google.maps.GeocoderStatus.OK ){
+         lat4 = results[0].geometry.location.lat();
+         lng4 = results[0].geometry.location.lng();
+         } else {
+         alert('住所が正常に取得できませんでした。');
+         return false;
+         }
+         });
+         }
+         
+         function getLatLng5 () { //住所から経度緯度取得
+         var address = document.getElementById("text5").value;
+         var geocoder = new google.maps.Geocoder();
+         
+         geocoder.geocode({
+         address: address
+         }, function( results, status ){
+         if( status == google.maps.GeocoderStatus.OK ){
+         lat5 = results[0].geometry.location.lat();
+         lng5 = results[0].geometry.location.lng();
+         maker ();
+         } else {
+         alert('住所が正常に取得できませんでした。');
+         return false;
+         }
+         });
+         }
+        
 		function maker (){
 		    
 			markerData = [
@@ -112,21 +190,25 @@
 					lng: 129.877667,
 					icon: 'tam.png' //
 				}, {
-					name: '長崎',
+					name: 'A',
 					lat: lat1,
 					lng: lng1
 				}, {
-					name: '夢タウン',
-					lat: 32.746283,
-					lng: 129.869982
+					name: 'B',
+					lat: lat2,
+					lng: lng2
 				}, {
-					name: '浜の町',
-					lat: 32.743141,
-					lng: 129.87489
+					name: 'C',
+					lat: lat3,
+					lng: lng3
 				}, {
-					name: 'ココウォーク',
-					lat: 32.762534,
-					lng: 129.864648
+					name: 'D',
+					lat: lat4,
+					lng: lng4
+				}, {
+					name: 'E',
+					lat: lat5,
+					lng: lng5
 				}
 			];
 			
