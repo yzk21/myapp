@@ -29,12 +29,6 @@
 </head>
 	<body>
 	    
-	    <input type="text" id="text1" placeholder="A">
-	    <input type="text" id="text2" placeholder="B">
-	    <input type="text" id="text3" placeholder="C">
-	    <input type="text" id="text4" placeholder="D">
-	    <input type="text" id="text5" placeholder="E">
-	    
 	    <nav class="navbar navbar-default">
 	<div class="container-fluid">
 		<div class="navbar-header">
@@ -44,24 +38,25 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">タイトル</a>
+			<a class="navbar-brand" >検索</a>
 		</div>
 		
 		<div class="collapse navbar-collapse" id="navbarEexample1">
 			<ul class="nav navbar-nav">
-				<li><a href="#">メニューＡ</a></li>
-				<li class="active"><a href="#">メニューＢ</a></li>
-				<li><a href="#">メニューＣ</a></li>
+				<li> <input type="text" id="text1" placeholder="A"> </li>
+				<li> <input type="text" id="text2" placeholder="B"> </li>
+				<li> <input type="text" id="text3" placeholder="C"> </li>
+				<li> <input type="text" id="text4" placeholder="D"> </li>
+				<li> <input type="text" id="text5" placeholder="E"> </li>
+				<li> <button onclick="getLatLng()">検索</button> </li>
 			</ul>
 		</div>
 	</div>
 </nav>
-	    
 
 		<div id="container">
 			<div id="sample"></div>
 
-			<p><button class="" onclick="getLatLng()">検索</button></p>
 		</div>
 
 		<script>
@@ -101,15 +96,15 @@
          if( status == google.maps.GeocoderStatus.OK ){
          lat1 = results[0].geometry.location.lat();
          lng1 = results[0].geometry.location.lng();
-         getLatLng2 ();
-         getLatLng3 ();
-         getLatLng4 ();
-         getLatLng5 ();
          } else {
          alert('住所が正常に取得できませんでした。');
          return false;
          }
          });
+         getLatLng2 ();
+         getLatLng3 ();
+         getLatLng4 ();
+         getLatLng5 ();
          }
          
          function getLatLng2 () { //住所から経度緯度取得
@@ -185,10 +180,8 @@
 		    
 			markerData = [
 				 {
-					name: '長崎駅',
-					lat: 32.750286,
-					lng: 129.877667,
-					icon: 'tam.png' //
+					lat: lat1,
+					lng: lng1,
 				}, {
 					name: 'A',
 					lat: lat1,
